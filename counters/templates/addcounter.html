@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+<p> Successfully Added 1 to Counter</p>
+<form action="{% url 'counters:index' %}" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name="submit">Get Back to Main Page</button>
+</form>
+{%endblock content%}

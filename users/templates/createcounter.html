@@ -1,0 +1,8 @@
+{%block content%}
+<p> Create Your Counter By Setting A Value</p>
+<form action="{% url 'users:createcounter %}" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name="submit">Get Back to Main Page</button>
+</form>
+{%endblock content%}

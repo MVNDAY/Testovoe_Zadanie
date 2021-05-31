@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+<p> Set a New Counter Value </p>
+<form action="{% url 'counters:changecounter' counter_id %}" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button name="submit">Get Back to Main Page</button>
+</form>
+{%endblock content%}
